@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login &ndash; VayuMitra</title>
+  <meta name="description" content="Sign in or create your VayuMitra citizen account to sync personal air alerts, saved cities, and exposure preferences." />
+  <link rel="icon" type="image/svg+xml" href="assets/icons/logo-leaf.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/pages.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+</head>
+<body data-page="login" class="vm-subpage">
+  <div class="vm-bg-stage" aria-hidden="true">
+    <div class="vm-bg-image"></div>
+    <div class="vm-water-shimmer"></div>
+    <div class="vm-leaf-layer">
+      <div class="vm-leaf vm-leaf-1"><svg viewBox="0 0 32 20" fill="none"><path d="M2 12C8 3 21 1 30 6C23 15 12 18 2 12Z" fill="#4ADE80"/><path d="M2 12C11 10 20 8 29 6" stroke="#15803D" stroke-width="1.3" stroke-linecap="round"/></svg></div>
+      <div class="vm-leaf vm-leaf-2"><svg viewBox="0 0 32 20" fill="none"><path d="M2 12C8 3 21 1 30 6C23 15 12 18 2 12Z" fill="#22C55E"/><path d="M2 12C11 10 20 8 29 6" stroke="#166534" stroke-width="1.3" stroke-linecap="round"/></svg></div>
+      <div class="vm-leaf vm-leaf-3"><svg viewBox="0 0 32 20" fill="none"><path d="M2 12C8 3 21 1 30 6C23 15 12 18 2 12Z" fill="#86EFAC"/><path d="M2 12C11 10 20 8 29 6" stroke="#15803D" stroke-width="1.3" stroke-linecap="round"/></svg></div>
+      <div class="vm-leaf vm-leaf-4"><svg viewBox="0 0 32 20" fill="none"><path d="M2 12C8 3 21 1 30 6C23 15 12 18 2 12Z" fill="#4ADE80"/><path d="M2 12C11 10 20 8 29 6" stroke="#166534" stroke-width="1.3" stroke-linecap="round"/></svg></div>
+      <div class="vm-leaf vm-leaf-5"><svg viewBox="0 0 32 20" fill="none"><path d="M2 12C8 3 21 1 30 6C23 15 12 18 2 12Z" fill="#22C55E"/><path d="M2 12C11 10 20 8 29 6" stroke="#15803D" stroke-width="1.3" stroke-linecap="round"/></svg></div>
+    </div>
+  </div>
+  <div class="vm-bg-scrim" aria-hidden="true"></div>
+
+  <header class="vm-header-wrap">
+    <nav class="vm-navbar" aria-label="Primary Navigation">
+      <a href="index.html" class="vm-brand">
+        <img src="assets/icons/logo-leaf.svg" alt="VayuMitra logo" class="vm-brand-icon" />
+        <span class="vm-brand-text">VayuMitra</span>
+      </a>
+      <div class="vm-nav-links">
+        <a href="index.html" class="vm-nav-link">Home</a>
+        <a href="insights.html" class="vm-nav-link">Insights</a>
+        <a href="routes.html" class="vm-nav-link">Routes</a>
+        <a href="alerts.html" class="vm-nav-link">Alerts</a>
+        <a href="reports.html" class="vm-nav-link">Reports</a>
+        <a href="community.html" class="vm-nav-link">Community</a>
+        <a href="profile.html" class="vm-nav-link">Profile</a>
+      </div>
+      <form id="vmNavSearchForm" class="vm-nav-search" role="search" aria-label="Search city air quality">
+        <div class="vm-nav-search-box">
+          <input id="vmNavSearchInput" type="search" placeholder="Search Indian city..." aria-label="Search Indian state or city" />
+          <button type="submit" class="vm-nav-search-btn" aria-label="Search city">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="11" cy="11" r="8"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+          </button>
+        </div>
+      </form>
+      <button id="vmMobileToggle" class="vm-mobile-toggle" type="button" aria-label="Toggle navigation menu" aria-expanded="false">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round">
+          <line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+      </button>
+    </nav>
+    <div id="vmMobileMenu" class="vm-mobile-menu">
+      <a href="index.html" class="vm-nav-link">Home</a>
+      <a href="insights.html" class="vm-nav-link">Insights</a>
+      <a href="routes.html" class="vm-nav-link">Routes</a>
+      <a href="alerts.html" class="vm-nav-link">Alerts</a>
+      <a href="reports.html" class="vm-nav-link">Reports</a>
+      <a href="community.html" class="vm-nav-link">Community</a>
+      <a href="profile.html" class="vm-nav-link">Profile</a>
+    </div>
+  </header>
+
+  <main class="vm-container">
+    <section class="vm-auth-wrap">
+      <article class="vm-card vm-auth-card">
+        <div class="vm-auth-brand-row">
+          <img src="assets/icons/logo-leaf.svg" alt="VayuMitra" width="38" height="38" />
+          <div>
+            <h1 class="vm-page-title" style="font-size:1.55rem;">VayuMitra Account</h1>
+            <p class="vm-section-subtitle" style="margin-top:2px;">Personal air quality alerts &amp; settings</p>
+          </div>
+        </div>
+
+        <div id="vmLoginBanner" class="vm-banner vm-hidden" style="margin-bottom:16px;"></div>
+
+        <div class="vm-auth-tabs" role="tablist" aria-label="Authentication mode">
+          <button id="vmTabLoginBtn" type="button" class="vm-auth-tab active" role="tab" aria-selected="true">Sign In</button>
+          <button id="vmTabRegisterBtn" type="button" class="vm-auth-tab" role="tab" aria-selected="false">Create Account</button>
+        </div>
+
+        <!-- Sign In Form -->
+        <form id="vmLoginForm">
+          <div class="vm-form-group">
+            <label for="loginEmail" class="vm-form-label">Email Address</label>
+            <input id="loginEmail" class="vm-input" type="email" autocomplete="email" placeholder="aarav@vayumitra.in" required />
+          </div>
+          <div class="vm-form-group">
+            <label for="loginPassword" class="vm-form-label">Password</label>
+            <div class="vm-auth-pw-row">
+              <input id="loginPassword" class="vm-input" type="password" autocomplete="current-password" placeholder="Enter your password" required />
+              <button id="loginTogglePw" type="button" class="vm-pw-eye-btn" aria-label="Show password">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg>
+              </button>
+            </div>
+          </div>
+
+          <button id="vmLoginSubmitBtn" type="submit" class="vm-btn vm-btn-primary" style="width:100%; margin-top:6px;">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"></path><polyline points="10 17 15 12 10 7"></polyline><line x1="15" y1="12" x2="3" y2="12"></line></svg>
+            <span>Sign In</span>
+          </button>
+
+          <div class="vm-auth-demo-box">
+            <div>
+              <strong style="display:block;">Demo Citizen Account</strong>
+              <span class="font-mono" style="font-size:0.78rem;">aarav@vayumitra.in / vayumitra123</span>
+            </div>
+            <button id="vmFillDemoBtn" type="button" class="vm-btn vm-btn-glass vm-btn-sm">Fill Demo</button>
+          </div>
+        </form>
+
+        <!-- Create Account Form -->
+        <form id="vmRegisterForm" class="vm-hidden">
+          <div class="vm-form-group">
+            <label for="regName" class="vm-form-label">Full Name</label>
+            <input id="regName" class="vm-input" type="text" autocomplete="name" placeholder="e.g., Priya Nair" required />
+          </div>
+          <div class="vm-form-group">
+            <label for="regEmail" class="vm-form-label">Email Address</label>
+            <input id="regEmail" class="vm-input" type="email" autocomplete="email" placeholder="name@example.com" required />
+          </div>
+          <div class="vm-form-group">
+            <label for="regPreferredCity" class="vm-form-label">Preferred Indian City</label>
+            <input id="regPreferredCity" class="vm-input" type="text" value="Mumbai" placeholder="Mumbai, Delhi, Bengaluru..." required />
+          </div>
+          <div class="vm-form-group">
+            <label for="regPassword" class="vm-form-label">Password (min 6 chars)</label>
+            <div class="vm-auth-pw-row">
+              <input id="regPassword" class="vm-input" type="password" autocomplete="new-password" minlength="6" placeholder="Create a password" required />
+              <button id="regTogglePw" type="button" class="vm-pw-eye-btn" aria-label="Show password">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg>
+              </button>
+            </div>
+          </div>
+
+          <button id="vmRegisterSubmitBtn" type="submit" class="vm-btn vm-btn-primary" style="width:100%; margin-top:6px;">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="8.5" cy="7" r="4"></circle><line x1="20" y1="8" x2="20" y2="14"></line><line x1="23" y1="11" x2="17" y2="11"></line></svg>
+            <span>Create Account</span>
+          </button>
+        </form>
+
+        <div style="margin-top:18px; text-align:center;">
+          <a href="index.html" class="vm-meta-line" style="justify-content:center; font-weight:600; color:var(--vm-green-primary);">
+            &larr; Continue browsing live AQI without signing in
+          </a>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <footer class="vm-footer">
+    <div class="vm-container vm-footer-inner">
+      <span>VayuMitra &ndash; Beyond Air Quality Monitoring.</span>
+      <div class="vm-footer-links">
+        <a href="index.html">Home</a>
+        <a href="insights.html">Insights</a>
+        <a href="routes.html">Routes</a>
+        <a href="alerts.html">Alerts</a>
+        <a href="reports.html">Reports</a>
+        <a href="profile.html">Profile</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="javascript/api.js"></script>
+  <script src="javascript/main.js"></script>
+  <script src="javascript/features.js"></script>
+</body>
+</html>

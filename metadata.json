@@ -1,0 +1,6 @@
+{
+  "name": "VayuMitra",
+  "description": "VayuMitra – Cleaner Air, Healthier Tomorrow. Smart environmental monitoring, hyperlocal pollution intelligence, clean air routes, community reporting, alerts, and reports.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

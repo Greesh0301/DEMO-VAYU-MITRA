@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 380 260" fill="none" role="img" aria-label="Two seriously concerned characters wearing protective masks in hazardous air quality">
+  <defs>
+    <linearGradient id="skyWorse" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FEE2E2"/>
+      <stop offset="100%" stop-color="#FEF2F2"/>
+    </linearGradient>
+    <linearGradient id="smogWorse" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#FCA5A5" stop-opacity="0.45"/>
+      <stop offset="50%" stop-color="#EF4444" stop-opacity="0.28"/>
+      <stop offset="100%" stop-color="#FCA5A5" stop-opacity="0.45"/>
+    </linearGradient>
+  </defs>
+  <rect width="380" height="260" rx="22" fill="url(#skyWorse)"/>
+  <!-- Dense Hazardous Haze & Warning Triangle Icon -->
+  <rect x="0" y="76" width="380" height="118" fill="url(#smogWorse)"/>
+  <circle cx="48" cy="52" r="4.5" fill="#DC2626" opacity="0.32"/>
+  <circle cx="118" cy="36" r="3.5" fill="#DC2626" opacity="0.28"/>
+  <circle cx="268" cy="48" r="4" fill="#DC2626" opacity="0.3"/>
+  <circle cx="336" cy="96" r="5" fill="#DC2626" opacity="0.32"/>
+  <circle cx="34" cy="144" r="4" fill="#DC2626" opacity="0.3"/>
+  <!-- Ground -->
+  <path d="M0 206C92 188 188 196 280 186C325 182 356 188 380 198V260H0V206Z" fill="#F87171" opacity="0.3"/>
+  <path d="M0 222C110 210 230 210 380 222V260H0V222Z" fill="#991B1B" opacity="0.2"/>
+
+  <!-- Character 1 (Left - Seriously Concerned, Respirator Mask, Protective Posture) -->
+  <g transform="translate(86, 64)">
+    <ellipse cx="44" cy="164" rx="34" ry="7" fill="#7F1D1D" opacity="0.18"/>
+    <rect x="29" y="122" width="11" height="38" rx="5.5" fill="#1E293B"/>
+    <rect x="47" y="122" width="11" height="38" rx="5.5" fill="#1E293B"/>
+    <ellipse cx="33" cy="161" rx="8" ry="4.5" fill="#7F1D1D"/>
+    <ellipse cx="54" cy="161" rx="8" ry="4.5" fill="#7F1D1D"/>
+    <!-- Torso -->
+    <path d="M20 75C20 63 30 57 44 57C58 57 68 63 68 75L72 126C72 130 68 133 63 133H25C20 133 16 130 16 126L20 75Z" fill="#DC2626"/>
+    <!-- Both Arms Crossed/Holding Mask & Chest -->
+    <path d="M18 76C8 92 20 100 38 92" stroke="#991B1B" stroke-width="10" stroke-linecap="round"/>
+    <circle cx="40" cy="91" r="5.5" fill="#F4B692"/>
+    <path d="M68 76C78 88 70 98 54 96" stroke="#991B1B" stroke-width="10" stroke-linecap="round"/>
+    <circle cx="52" cy="95" r="5.5" fill="#F4B692"/>
+    <!-- Head & Hair -->
+    <circle cx="44" cy="31" r="23" fill="#2C1B18"/>
+    <path d="M21 35C20 47 24 55 30 57H58C64 55 68 47 67 35" fill="#2C1B18"/>
+    <rect x="38" y="45" width="12" height="14" rx="5" fill="#F4B692"/>
+    <circle cx="44" cy="34" r="18" fill="#F4B692"/>
+    <path d="M26 29C29 17 42 14 54 18C60 20 63 26 62 31C55 25 41 24 26 29Z" fill="#2C1B18"/>
+    <!-- Seriously Concerned Wide Eyes & Angled Brows -->
+    <path d="M32 27L40 25" stroke="#1F2937" stroke-width="2.2" stroke-linecap="round"/>
+    <path d="M56 27L48 25" stroke="#1F2937" stroke-width="2.2" stroke-linecap="round"/>
+    <circle cx="37" cy="31" r="2.6" fill="#1F2937"/>
+    <circle cx="51" cy="31" r="2.6" fill="#1F2937"/>
+    <!-- Heavy Respirator Mask -->
+    <path d="M25 36L30 37M63 36L58 37" stroke="#991B1B" stroke-width="1.8"/>
+    <path d="M29 35C36 31 52 31 59 35L57 48C50 53 38 53 31 48L29 35Z" fill="#FFFFFF" stroke="#DC2626" stroke-width="1.6"/>
+    <circle cx="44" cy="42" r="4.5" fill="#FECACA" stroke="#DC2626" stroke-width="1.3"/>
+  </g>
+
+  <!-- Character 2 (Right - Seriously Concerned, Respirator Mask, Hand Shielding) -->
+  <g transform="translate(202, 58)">
+    <ellipse cx="46" cy="170" rx="35" ry="7" fill="#7F1D1D" opacity="0.18"/>
+    <rect x="30" y="124" width="12" height="42" rx="6" fill="#0F172A"/>
+    <rect x="49" y="124" width="12" height="42" rx="6" fill="#0F172A"/>
+    <ellipse cx="35" cy="167" rx="8.5" ry="4.5" fill="#7F1D1D"/>
+    <ellipse cx="56" cy="167" rx="8.5" ry="4.5" fill="#7F1D1D"/>
+    <path d="M20 73C20 61 31 55 46 55C61 55 72 61 72 73L74 128C74 132 70 135 65 135H27C22 135 18 132 18 128L20 73Z" fill="#B91C1C"/>
+    <!-- Left Arm Holding Respirator -->
+    <path d="M19 75C6 82 14 60 30 48" stroke="#7F1D1D" stroke-width="10" stroke-linecap="round"/>
+    <circle cx="32" cy="46" r="5.5" fill="#E8A985"/>
+    <!-- Right Arm Gesture Warning -->
+    <path d="M72 75C84 86 84 100 78 112" stroke="#7F1D1D" stroke-width="10" stroke-linecap="round"/>
+    <circle cx="77" cy="114" r="5.5" fill="#E8A985"/>
+    <!-- Head & Hair -->
+    <rect x="40" y="44" width="12" height="14" rx="5" fill="#E8A985"/>
+    <circle cx="46" cy="32" r="18.5" fill="#E8A985"/>
+    <path d="M27 29C27 15 40 10 54 13C63 15 66 23 65 31C58 23 39 21 27 29Z" fill="#1E293B"/>
+    <!-- Concerned Brows & Eyes -->
+    <path d="M34 25L42 23" stroke="#1F2937" stroke-width="2.2" stroke-linecap="round"/>
+    <path d="M58 25L50 23" stroke="#1F2937" stroke-width="2.2" stroke-linecap="round"/>
+    <circle cx="39" cy="29.5" r="2.6" fill="#1F2937"/>
+    <circle cx="53" cy="29.5" r="2.6" fill="#1F2937"/>
+    <!-- Respirator Mask -->
+    <path d="M27 34L32 35M65 34L60 35" stroke="#991B1B" stroke-width="1.8"/>
+    <path d="M31 33C38 29 54 29 61 33L59 46C52 51 40 51 33 46L31 33Z" fill="#FFFFFF" stroke="#DC2626" stroke-width="1.6"/>
+    <circle cx="46" cy="40" r="4.5" fill="#FECACA" stroke="#DC2626" stroke-width="1.3"/>
+  </g>
+</svg>

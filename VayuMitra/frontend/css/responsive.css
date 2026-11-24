@@ -1,0 +1,183 @@
+/* VayuMitra Responsive Breakpoints (Desktop, Laptop, Tablet, Mobile) */
+
+@media (max-width: 1220px) {
+  .vm-nav-links {
+    gap: 10px;
+  }
+  .vm-nav-link {
+    font-size: 0.8rem;
+  }
+  .vm-nav-search-box input {
+    width: 118px;
+  }
+  .vm-stats-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+  .vm-quick-grid,
+  .vm-levels-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 1020px) {
+  .vm-nav-links {
+    display: none;
+  }
+  .vm-nav-search {
+    margin-left: auto;
+    border-left: none;
+    padding-left: 0;
+  }
+  .vm-mobile-toggle {
+    display: inline-flex;
+  }
+  .vm-brand {
+    border-right: none;
+    padding-right: 0;
+  }
+  .vm-aqi-main-card,
+  .vm-dashboard-split,
+  .vm-forecast-split,
+  .vm-route-bar,
+  .vm-profile-hero,
+  .vm-gauge-split-3,
+  .vm-sim-split {
+    grid-template-columns: 1fr;
+  }
+  .vm-sim-right-panel {
+    padding-left: 0;
+    border-left: none;
+    border-top: 1px solid var(--vm-border-hairline);
+    padding-top: 14px;
+  }
+  .vm-two-col,
+  .vm-route-layout,
+  .vm-community-layout,
+  .vm-settings-grid {
+    grid-template-columns: 1fr;
+  }
+  .vm-kpi-row-4,
+  .vm-levels-grid,
+  .vm-sim-cards-grid,
+  .vm-measures-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .vm-pollutants-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .vm-windows-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .vm-hero-stat-tiles {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 720px) {
+  .vm-container {
+    padding: 0 16px;
+  }
+  .vm-header-wrap {
+    padding: 10px 12px 0;
+  }
+  .vm-navbar {
+    padding: 8px 14px;
+  }
+  .vm-hero {
+    padding: 32px 0 48px;
+    min-height: calc(100vh - 76px);
+    min-height: calc(100dvh - 76px);
+  }
+  .vm-gauge-split,
+  .vm-report-summary-body {
+    grid-template-columns: 1fr;
+  }
+  .vm-pollutant-bars-col,
+  .vm-report-metrics-col {
+    padding-left: 0;
+    border-left: none;
+    border-top: 1px solid var(--vm-border-hairline);
+    padding-top: 14px;
+  }
+  .vm-fp-row {
+    grid-template-columns: 24px 120px 1fr 42px;
+    gap: 8px;
+  }
+  .vm-weather-inline-grid,
+  .vm-comm-stats-row,
+  .vm-hero-stat-tiles {
+    grid-template-columns: 1fr;
+  }
+  .vm-weather-inline-item,
+  .vm-comm-stat-cell {
+    border-right: none;
+    padding-right: 0;
+    border-bottom: 1px solid var(--vm-border-hairline);
+    padding-bottom: 8px;
+  }
+  .vm-weather-inline-item:last-child,
+  .vm-comm-stat-cell:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+  .vm-stats-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .vm-pollutants-grid,
+  .vm-kpi-row-3,
+  .vm-kpi-row-4,
+  .vm-levels-grid,
+  .vm-quick-grid,
+  .vm-sim-cards-grid,
+  .vm-measures-grid {
+    grid-template-columns: 1fr;
+  }
+  .vm-aqi-main-card {
+    padding: 20px;
+  }
+  .vm-search-form {
+    width: 100%;
+    justify-content: space-between;
+  }
+  .vm-search-form input {
+    min-width: 0;
+    width: 100%;
+  }
+  .vm-map-container {
+    height: 360px;
+  }
+  .vm-report-item {
+    grid-template-columns: 1fr;
+  }
+  .vm-report-thumb {
+    width: 100%;
+    height: 180px;
+  }
+  .vm-chart-box {
+    height: 240px;
+  }
+  .vm-chart-box-lg {
+    height: 260px;
+  }
+  .vm-fingerprint-grid,
+  .vm-slider-grid,
+  .vm-windows-grid {
+    grid-template-columns: 1fr;
+  }
+  .vm-nav-search-box input {
+    width: 108px;
+  }
+  .vm-nav-auth-label {
+    display: none;
+  }
+  .vm-nav-auth-chip {
+    padding: 6px 10px;
+    font-size: 0.78rem;
+  }
+  .vm-nav-auth-chip.is-signed-in {
+    padding: 4px;
+  }
+  .vm-auth-card {
+    padding: 22px 18px;
+  }
+}

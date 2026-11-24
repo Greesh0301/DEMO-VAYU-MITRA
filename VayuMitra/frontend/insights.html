@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Insights &ndash; Pollution Intelligence Centre &ndash; VayuMitra</title>
+  <meta name="description" content="Pollution source fingerprinting, 24-hour AQI prediction, pollution time machine, and What-If simulator." />
+  <link rel="icon" type="image/svg+xml" href="assets/icons/logo-leaf.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/pages.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+</head>
+<body data-page="insights" class="vm-subpage">
+  <div class="vm-bg-stage" aria-hidden="true">
+    <div class="vm-bg-image"></div>
+    <div class="vm-water-shimmer"></div>
+    <div class="vm-leaf-layer">
+      <div class="vm-leaf vm-leaf-1"><svg viewBox="0 0 32 20" fill="none"><path d="M2 12C8 3 21 1 30 6C23 15 12 18 2 12Z" fill="#4ADE80"/><path d="M2 12C11 10 20 8 29 6" stroke="#15803D" stroke-width="1.3" stroke-linecap="round"/></svg></div>
+      <div class="vm-leaf vm-leaf-2"><svg viewBox="0 0 32 20" fill="none"><path d="M2 12C8 3 21 1 30 6C23 15 12 18 2 12Z" fill="#22C55E"/><path d="M2 12C11 10 20 8 29 6" stroke="#166534" stroke-width="1.3" stroke-linecap="round"/></svg></div>
+      <div class="vm-leaf vm-leaf-3"><svg viewBox="0 0 32 20" fill="none"><path d="M2 12C8 3 21 1 30 6C23 15 12 18 2 12Z" fill="#86EFAC"/><path d="M2 12C11 10 20 8 29 6" stroke="#15803D" stroke-width="1.3" stroke-linecap="round"/></svg></div>
+      <div class="vm-leaf vm-leaf-4"><svg viewBox="0 0 32 20" fill="none"><path d="M2 12C8 3 21 1 30 6C23 15 12 18 2 12Z" fill="#4ADE80"/><path d="M2 12C11 10 20 8 29 6" stroke="#166534" stroke-width="1.3" stroke-linecap="round"/></svg></div>
+      <div class="vm-leaf vm-leaf-5"><svg viewBox="0 0 32 20" fill="none"><path d="M2 12C8 3 21 1 30 6C23 15 12 18 2 12Z" fill="#22C55E"/><path d="M2 12C11 10 20 8 29 6" stroke="#15803D" stroke-width="1.3" stroke-linecap="round"/></svg></div>
+    </div>
+  </div>
+  <div class="vm-bg-scrim" aria-hidden="true"></div>
+
+  <header class="vm-header-wrap">
+    <nav class="vm-navbar" aria-label="Primary Navigation">
+      <a href="index.html" class="vm-brand">
+        <img src="assets/icons/logo-leaf.svg" alt="VayuMitra logo" class="vm-brand-icon" />
+        <span class="vm-brand-text">VayuMitra</span>
+      </a>
+      <div class="vm-nav-links">
+        <a href="index.html" class="vm-nav-link">Home</a>
+        <a href="insights.html" class="vm-nav-link active">Insights</a>
+        <a href="routes.html" class="vm-nav-link">Routes</a>
+        <a href="alerts.html" class="vm-nav-link">Alerts</a>
+        <a href="reports.html" class="vm-nav-link">Reports</a>
+        <a href="community.html" class="vm-nav-link">Community</a>
+        <a href="profile.html" class="vm-nav-link">Profile</a>
+      </div>
+      <form id="vmNavSearchForm" class="vm-nav-search" role="search" aria-label="Search city air quality">
+        <div class="vm-nav-search-box">
+          <input id="vmNavSearchInput" type="search" placeholder="Search Indian city..." aria-label="Search Indian state or city" />
+          <button type="submit" class="vm-nav-search-btn" aria-label="Search city">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="11" cy="11" r="8"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+          </button>
+        </div>
+      </form>
+      <button id="vmMobileToggle" class="vm-mobile-toggle" type="button" aria-label="Toggle navigation menu" aria-expanded="false">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round">
+          <line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+      </button>
+    </nav>
+    <div id="vmMobileMenu" class="vm-mobile-menu">
+      <a href="index.html" class="vm-nav-link">Home</a>
+      <a href="insights.html" class="vm-nav-link active">Insights</a>
+      <a href="routes.html" class="vm-nav-link">Routes</a>
+      <a href="alerts.html" class="vm-nav-link">Alerts</a>
+      <a href="reports.html" class="vm-nav-link">Reports</a>
+      <a href="community.html" class="vm-nav-link">Community</a>
+      <a href="profile.html" class="vm-nav-link">Profile</a>
+    </div>
+  </header>
+
+  <main class="vm-container">
+    <section class="vm-page-header">
+      <div class="vm-page-header-inner">
+        <div>
+          <h1 class="vm-page-title vm-title-with-ico">
+            <span class="vm-head-ico" style="width:32px; height:32px;" aria-hidden="true">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>
+            </span>
+            <span>Insights</span>
+          </h1>
+          <p class="vm-section-subtitle">Pollution Intelligence Centre &middot; <strong id="insLocationName">--</strong></p>
+        </div>
+        <span class="vm-badge-data vm-badge-verified" id="insForecastQuality">Live Data</span>
+      </div>
+    </section>
+
+    <div class="vm-jump-tabs">
+      <a href="#ins-sources" class="vm-jump-pill active vm-title-with-ico" style="gap:7px;">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        <span>Source Detection</span>
+      </a>
+      <a href="#ins-prediction" class="vm-jump-pill vm-title-with-ico" style="gap:7px;">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline><polyline points="17 6 23 6 23 12"></polyline></svg>
+        <span>AQI Prediction</span>
+      </a>
+      <a href="#ins-history" class="vm-jump-pill vm-title-with-ico" style="gap:7px;">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+        <span>Pollution History</span>
+      </a>
+      <a href="#ins-simulator" class="vm-jump-pill vm-title-with-ico" style="gap:7px;">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3h6"></path><path d="M10 3v6l-5 9a2 2 0 0 0 1.7 3h10.6a2 2 0 0 0 1.7-3l-5-9V3"></path></svg>
+        <span>What-If Simulator</span>
+      </a>
+    </div>
+
+    <div id="vmInsightsBanner" class="vm-banner vm-hidden"></div>
+
+    <!-- Scrollable Section 1: Pollution Source Fingerprinting (Exact image layout) -->
+    <section id="ins-sources" class="vm-section">
+      <article class="vm-card">
+        <div class="vm-section-head" style="margin-bottom:6px;">
+          <div>
+            <h2 class="vm-section-title vm-title-with-ico">
+              <span class="vm-head-ico" aria-hidden="true">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12C2 6.5 6.5 2 12 2a10 10 0 0 1 8 4"></path><path d="M5 19.5C5.5 18 6 15 6 12c0-.7.12-1.37.34-2"></path><path d="M17.29 21.02c.12-.6.43-2.3.5-3.02"></path><path d="M12 10a2 2 0 0 0-2 2c0 1.02-.1 2.51-.26 4"></path><path d="M8.65 22c.21-.66.45-1.32.57-2"></path><path d="M14 13.12c0 2.38 0 6.38-1 8.88"></path><path d="M2 16h.01"></path><path d="M21.8 16c.2-2 .131-5.354 0-6"></path><path d="M9 6.8a6 6 0 0 1 9 5.2c0 .47 0 1.17-.02 2"></path></svg>
+              </span>
+              <span>Pollution Source Fingerprinting</span>
+            </h2>
+            <p class="vm-section-subtitle" style="margin-top:3px;">Possible sources of current pollution:</p>
+          </div>
+        </div>
+
+        <div id="insFingerprintGrid" class="vm-fp-list">
+          <span class="vm-meta-line">Loading source signals...</span>
+        </div>
+
+        <div class="vm-fp-conf-bar" id="insFingerprintConfBar">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="#16a34a" aria-hidden="true">
+            <circle cx="12" cy="12" r="10"></circle>
+            <polyline points="8.5 12.5 11 15 15.5 9.5" fill="none" stroke="#ffffff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"></polyline>
+          </svg>
+          <span id="insFingerprintConfBadge">Confidence Level: --</span>
+        </div>
+      </article>
+    </section>
+
+    <!-- Scrollable Section 2: AQI Prediction & Expected AQI Card -->
+    <section id="ins-prediction" class="vm-section">
+      <article class="vm-card">
+        <div class="vm-section-head">
+          <div>
+            <h2 class="vm-section-title vm-title-with-ico">
+              <span class="vm-head-ico" aria-hidden="true">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline><polyline points="17 6 23 6 23 12"></polyline></svg>
+              </span>
+              <span>AQI Prediction</span>
+            </h2>
+            <p class="vm-section-subtitle">Next 24 Hours Forecast</p>
+          </div>
+          <span class="vm-status-tag vm-status-good">Predicted AQI &amp; Range</span>
+        </div>
+
+        <div class="vm-forecast-split">
+          <div class="vm-chart-box-lg">
+            <canvas id="vmInsightsForecastChart"></canvas>
+          </div>
+          <div class="vm-expected-aqi-box">
+            <span class="vm-stat-label">Expected AQI</span>
+            <div id="insExpectedAqiVal" class="vm-gauge-num">--</div>
+            <span id="insExpectedAqiBadge" class="vm-status-tag vm-status-moderate">--</span>
+            <p id="insRateSummary" class="vm-meta-line" style="justify-content:center; margin-top:4px; text-align:center;">--</p>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <!-- Scrollable Section 3: Pollution Time Machine (Date Picker + Hourly Bar Chart) -->
+    <section id="ins-history" class="vm-section">
+      <article class="vm-card">
+        <div class="vm-section-head">
+          <div>
+            <h2 class="vm-section-title vm-title-with-ico">
+              <span class="vm-head-ico" aria-hidden="true">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"></path><path d="M3 3v5h5"></path><path d="M12 7v5l4 2"></path></svg>
+              </span>
+              <span>Pollution Time Machine</span>
+            </h2>
+            <p class="vm-section-subtitle">Explore past air quality data</p>
+          </div>
+          <div style="display:flex; align-items:center; gap:8px; background:rgba(255,255,255,0.9); border:1px solid var(--vm-border-hairline); border-radius:12px; padding:4px 10px;">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#1b8a4b" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+            <select id="tmTargetDate" class="vm-select" style="width:auto; min-width:135px; border:none; background:transparent; padding:4px;" aria-label="Select historical date"></select>
+          </div>
+        </div>
+        <div class="vm-chart-box" style="height:240px;">
+          <canvas id="vmTimeMachineBarChart"></canvas>
+        </div>
+      </article>
+    </section>
+
+    <!-- Scrollable Section 4: What-If Pollution Simulator -->
+    <section id="ins-simulator" class="vm-section">
+      <article class="vm-card">
+        <div class="vm-section-head">
+          <div>
+            <h2 class="vm-section-title vm-title-with-ico">
+              <span class="vm-head-ico" aria-hidden="true">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3h6"></path><path d="M10 3v6l-5 9a2 2 0 0 0 1.7 3h10.6a2 2 0 0 0 1.7-3l-5-9V3"></path></svg>
+              </span>
+              <span>What-If Pollution Simulator</span>
+            </h2>
+            <p class="vm-section-subtitle">See the impact of different solutions (Hypothetical Results)</p>
+          </div>
+          <span id="simResultSummary" class="vm-badge-data vm-badge-hypothetical">Adjust sliders</span>
+        </div>
+
+        <div class="vm-sim-split">
+          <div class="vm-sim-cards-grid">
+            <div class="vm-sim-tile-card tile-traffic">
+              <div class="vm-sim-icon-box" aria-hidden="true">
+                <!-- Car Icon -->
+                <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#10343b" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M19 17h2c.6 0 1-.4 1-1v-3c0-.9-.7-1.7-1.5-1.9C18.7 10.6 16 10 16 10s-1.3-1.4-2.2-2.3c-.5-.4-1.1-.7-1.8-.7H5c-.6 0-1.1.4-1.4.9l-1.4 2.9A3.7 3.7 0 0 0 2 12v4c0 .6.4 1 1 1h2"></path>
+                  <circle cx="7" cy="17" r="2" fill="#0ea5e9"></circle>
+                  <path d="M9 17h6"></path>
+                  <circle cx="17" cy="17" r="2" fill="#0ea5e9"></circle>
+                </svg>
+              </div>
+              <strong style="font-size:0.95rem;">Reduce Traffic</strong>
+              <input id="simTrafficSlider" type="range" min="0" max="80" step="5" value="20" class="vm-range" aria-label="Reduce Traffic percentage" />
+              <span id="simTrafficVal" class="vm-sim-tile-pill">Control 20%</span>
+            </div>
+
+            <div class="vm-sim-tile-card tile-dust">
+              <div class="vm-sim-icon-box" aria-hidden="true">
+                <!-- Construction Crane Icon -->
+                <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#10343b" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M3 21h18"></path>
+                  <path d="M7 21V3"></path>
+                  <path d="M3 7h17l-3-4H7"></path>
+                  <path d="M17 7v5"></path>
+                  <rect x="14.5" y="12" width="5" height="4" rx="1" fill="#f59e0b"></rect>
+                </svg>
+              </div>
+              <strong style="font-size:0.95rem;">Control Dust</strong>
+              <input id="simDustSlider" type="range" min="0" max="80" step="5" value="15" class="vm-range" aria-label="Control Dust percentage" />
+              <span id="simDustVal" class="vm-sim-tile-pill">Control 15%</span>
+            </div>
+
+            <div class="vm-sim-tile-card tile-greenery">
+              <div class="vm-sim-icon-box" aria-hidden="true">
+                <!-- Trees Icon -->
+                <svg width="38" height="38" viewBox="0 0 64 64" fill="none">
+                  <path d="M22 54V36" stroke="#5c4033" stroke-width="4" stroke-linecap="round"></path>
+                  <circle cx="22" cy="27" r="11" fill="#15803d"></circle>
+                  <path d="M42 54V32" stroke="#5c4033" stroke-width="4.2" stroke-linecap="round"></path>
+                  <circle cx="42" cy="23" r="13" fill="#16a34a"></circle>
+                  <circle cx="32" cy="31" r="9" fill="#22c55e"></circle>
+                  <path d="M12 54H52" stroke="#15803d" stroke-width="3" stroke-linecap="round"></path>
+                </svg>
+              </div>
+              <strong style="font-size:0.95rem;">Increase Greenery</strong>
+              <input id="simGreenerySlider" type="range" min="0" max="60" step="5" value="25" class="vm-range" aria-label="Increase Greenery percentage" />
+              <span id="simGreeneryVal" class="vm-sim-tile-pill">Boost 25%</span>
+            </div>
+          </div>
+
+          <div class="vm-sim-right-panel">
+            <div class="vm-eco-callout" style="padding:16px 18px; border-radius:16px; text-align:center; align-items:center;">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#15803d" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .2 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5"></path>
+                <path d="M9 18h6"></path>
+                <path d="M10 22h4"></path>
+              </svg>
+              <strong style="font-size:1.02rem; color:#14532d; line-height:1.35;">A greener city can help us breathe better!</strong>
+              <div style="font-size:1.1rem; font-weight:800; color:var(--vm-teal-deep);">
+                <span id="simBaseAqi">--</span> &rarr; <span id="simOutAqi" style="color:var(--vm-green-primary);">--</span>
+              </div>
+              <p id="simImpactExplanation" class="vm-meta-line" style="justify-content:center; text-align:center;">Hypothetical estimate based on current pollutant mix.</p>
+            </div>
+            <div style="display:flex; gap:8px; justify-content:center;">
+              <button id="simRunBtn" type="button" class="vm-btn vm-btn-primary vm-btn-sm" style="flex:1;">Simulate</button>
+              <button id="simResetBtn" type="button" class="vm-btn vm-btn-outline vm-btn-sm">Reset</button>
+            </div>
+          </div>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <footer class="vm-footer">
+    <div class="vm-container vm-footer-inner">
+      <span>VayuMitra &ndash; Beyond Air Quality Monitoring.</span>
+      <div class="vm-footer-links">
+        <a href="index.html">Home</a>
+        <a href="routes.html">Routes</a>
+        <a href="alerts.html">Alerts</a>
+        <a href="reports.html">Reports</a>
+        <a href="community.html">Community</a>
+        <a href="profile.html">Profile</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.4/dist/chart.umd.min.js"></script>
+  <script src="javascript/api.js"></script>
+  <script src="javascript/main.js"></script>
+  <script src="javascript/features.js"></script>
+</body>
+</html>

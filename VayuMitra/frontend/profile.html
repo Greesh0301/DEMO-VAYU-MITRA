@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Profile &amp; Settings &ndash; VayuMitra</title>
+  <meta name="description" content="Personal air exposure overview, AQI timeline, and account preferences." />
+  <link rel="icon" type="image/svg+xml" href="assets/icons/logo-leaf.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/pages.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+</head>
+<body data-page="profile" class="vm-subpage">
+  <div class="vm-bg-stage" aria-hidden="true">
+    <div class="vm-bg-image"></div>
+    <div class="vm-water-shimmer"></div>
+    <div class="vm-leaf-layer">
+      <div class="vm-leaf vm-leaf-1"><svg viewBox="0 0 32 20" fill="none"><path d="M2 12C8 3 21 1 30 6C23 15 12 18 2 12Z" fill="#4ADE80"/><path d="M2 12C11 10 20 8 29 6" stroke="#15803D" stroke-width="1.3" stroke-linecap="round"/></svg></div>
+      <div class="vm-leaf vm-leaf-2"><svg viewBox="0 0 32 20" fill="none"><path d="M2 12C8 3 21 1 30 6C23 15 12 18 2 12Z" fill="#22C55E"/><path d="M2 12C11 10 20 8 29 6" stroke="#166534" stroke-width="1.3" stroke-linecap="round"/></svg></div>
+      <div class="vm-leaf vm-leaf-3"><svg viewBox="0 0 32 20" fill="none"><path d="M2 12C8 3 21 1 30 6C23 15 12 18 2 12Z" fill="#86EFAC"/><path d="M2 12C11 10 20 8 29 6" stroke="#15803D" stroke-width="1.3" stroke-linecap="round"/></svg></div>
+      <div class="vm-leaf vm-leaf-4"><svg viewBox="0 0 32 20" fill="none"><path d="M2 12C8 3 21 1 30 6C23 15 12 18 2 12Z" fill="#4ADE80"/><path d="M2 12C11 10 20 8 29 6" stroke="#166534" stroke-width="1.3" stroke-linecap="round"/></svg></div>
+      <div class="vm-leaf vm-leaf-5"><svg viewBox="0 0 32 20" fill="none"><path d="M2 12C8 3 21 1 30 6C23 15 12 18 2 12Z" fill="#22C55E"/><path d="M2 12C11 10 20 8 29 6" stroke="#15803D" stroke-width="1.3" stroke-linecap="round"/></svg></div>
+    </div>
+  </div>
+  <div class="vm-bg-scrim" aria-hidden="true"></div>
+
+  <header class="vm-header-wrap">
+    <nav class="vm-navbar" aria-label="Primary Navigation">
+      <a href="index.html" class="vm-brand">
+        <img src="assets/icons/logo-leaf.svg" alt="VayuMitra logo" class="vm-brand-icon" />
+        <span class="vm-brand-text">VayuMitra</span>
+      </a>
+      <div class="vm-nav-links">
+        <a href="index.html" class="vm-nav-link">Home</a>
+        <a href="insights.html" class="vm-nav-link">Insights</a>
+        <a href="routes.html" class="vm-nav-link">Routes</a>
+        <a href="alerts.html" class="vm-nav-link">Alerts</a>
+        <a href="reports.html" class="vm-nav-link">Reports</a>
+        <a href="community.html" class="vm-nav-link">Community</a>
+        <a href="profile.html" class="vm-nav-link active">Profile</a>
+      </div>
+      <form id="vmNavSearchForm" class="vm-nav-search" role="search" aria-label="Search city air quality">
+        <div class="vm-nav-search-box">
+          <input id="vmNavSearchInput" type="search" placeholder="Search Indian city..." aria-label="Search Indian state or city" />
+          <button type="submit" class="vm-nav-search-btn" aria-label="Search city">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="11" cy="11" r="8"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+          </button>
+        </div>
+      </form>
+      <button id="vmMobileToggle" class="vm-mobile-toggle" type="button" aria-label="Toggle navigation menu" aria-expanded="false">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round">
+          <line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+      </button>
+    </nav>
+    <div id="vmMobileMenu" class="vm-mobile-menu">
+      <a href="index.html" class="vm-nav-link">Home</a>
+      <a href="insights.html" class="vm-nav-link">Insights</a>
+      <a href="routes.html" class="vm-nav-link">Routes</a>
+      <a href="alerts.html" class="vm-nav-link">Alerts</a>
+      <a href="reports.html" class="vm-nav-link">Reports</a>
+      <a href="community.html" class="vm-nav-link">Community</a>
+      <a href="profile.html" class="vm-nav-link active">Profile</a>
+    </div>
+  </header>
+
+  <main class="vm-container">
+    <div id="vmProfileBanner" class="vm-banner vm-hidden" style="margin-top:24px;"></div>
+
+    <!-- Scrollable Section 1: Profile Header Card -->
+    <section id="air-twin-section" class="vm-section" style="padding-top:28px;">
+      <article class="vm-card vm-profile-hero">
+        <div id="profAvatarBadge" class="vm-avatar-circle">V</div>
+        <div>
+          <h1 id="profHeroName" class="vm-page-title" style="font-size:clamp(1.5rem,2.6vw,2.1rem);">VayuMitra User</h1>
+          <div style="display:flex; align-items:center; gap:8px; margin:4px 0 6px; flex-wrap:wrap;">
+            <span class="vm-badge-data vm-badge-verified">Air Guardian</span>
+            <span id="profHeroCityPill" class="vm-meta-line">Default City: --</span>
+          </div>
+          <p class="vm-section-subtitle" style="font-style:italic; margin-top:0;">"Breathe Better, Live Healthier."</p>
+        </div>
+        <div class="vm-hero-stat-tiles">
+          <div class="vm-hero-stat-tile">
+            <div id="twinWeightedAqiHero" class="vm-stat-value" style="font-size:1.3rem;">--</div>
+            <span class="vm-stat-label">Exposure AQI</span>
+          </div>
+          <div class="vm-hero-stat-tile">
+            <div id="twinOutdoorHours" class="vm-stat-value" style="font-size:1.3rem;">--</div>
+            <span class="vm-stat-label">Outdoor Time</span>
+          </div>
+          <div class="vm-hero-stat-tile">
+            <div id="twinRiskLabel" class="vm-stat-value" style="font-size:1.15rem;">--</div>
+            <span class="vm-stat-label">Exposure Risk</span>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <!-- Scrollable Section 2: Your Air Exposure Overview & Personal AQI Timeline -->
+    <section class="vm-section">
+      <div class="vm-two-col">
+        <article class="vm-card">
+          <h2 class="vm-section-title" style="margin-bottom:14px;">Your Air Exposure Overview</h2>
+          <div class="vm-gauge-split" style="grid-template-columns:200px 1fr;">
+            <div id="vmTwinExposureGauge" class="vm-gauge-box"></div>
+            <ul class="vm-check-list" style="gap:12px;">
+              <li><span class="vm-check-ico">&bull;</span><span><strong>Daily Exposure:</strong> <span id="twinWeightedAqi">--</span></span></li>
+              <li><span class="vm-check-ico">&bull;</span><span><strong>PM2.5 Exposure:</strong> <span id="twinEstimatedPm25">--</span></span></li>
+              <li><span class="vm-check-ico">&bull;</span><span><strong>Routine Hours:</strong> <span id="twinTotalHours">--</span></span></li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="vm-card">
+          <div class="vm-section-head" style="margin-bottom:10px;">
+            <h2 class="vm-section-title">Your Personal AQI Timeline</h2>
+            <button id="vmAirTwinExportBtn" type="button" class="vm-btn vm-btn-outline vm-btn-sm">Download CSV</button>
+          </div>
+          <div class="vm-chart-box" style="height:220px;">
+            <canvas id="vmTwinExposureChart"></canvas>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Scrollable Section 3: Profile & Preferences Settings -->
+    <section class="vm-section">
+      <form id="vmProfileSettingsForm">
+        <div class="vm-settings-grid">
+          <article class="vm-card">
+            <h2 class="vm-section-title" style="margin-bottom:14px;">Profile &amp; Preferences</h2>
+            <div class="vm-form-group">
+              <label for="profName" class="vm-form-label">Name</label>
+              <input id="profName" class="vm-input" type="text" required />
+            </div>
+            <div class="vm-form-group">
+              <label for="profEmail" class="vm-form-label">Email</label>
+              <input id="profEmail" class="vm-input" type="email" placeholder="name@example.com" />
+            </div>
+            <div class="vm-form-group">
+              <label for="profDefaultCity" class="vm-form-label">Default City</label>
+              <input id="profDefaultCity" class="vm-input" type="text" placeholder="Mumbai, Delhi, Pune..." required />
+            </div>
+            <div class="vm-form-group">
+              <label for="profAqiStandard" class="vm-form-label">AQI Standard</label>
+              <select id="profAqiStandard" class="vm-select">
+                <option value="NAQI">Indian NAQI (0–500)</option>
+                <option value="US">US EPA AQI (0–500)</option>
+                <option value="EU">European AQI (EAQI)</option>
+              </select>
+            </div>
+            <div class="vm-form-group">
+              <label for="profTempUnit" class="vm-form-label">Temperature Unit</label>
+              <select id="profTempUnit" class="vm-select">
+                <option value="C">Celsius (&deg;C)</option>
+                <option value="F">Fahrenheit (&deg;F)</option>
+              </select>
+            </div>
+            <div class="vm-form-group">
+              <label for="profAqiThreshold" class="vm-form-label">Alert AQI Threshold</label>
+              <input id="profAqiThreshold" type="number" min="25" max="400" class="vm-input" />
+            </div>
+          </article>
+
+          <article class="vm-card" style="display:flex; flex-direction:column; justify-content:space-between;">
+            <div>
+              <h2 class="vm-section-title" style="margin-bottom:14px;">Alerts, Privacy &amp; Security</h2>
+              <div class="vm-switch-row">
+                <label for="profNotifEnabled">Enable AQI alerts</label>
+                <input id="profNotifEnabled" type="checkbox" class="vm-checkbox" />
+              </div>
+              <div class="vm-switch-row">
+                <label for="profAutoDetect">Auto-detect location</label>
+                <input id="profAutoDetect" type="checkbox" class="vm-checkbox" />
+              </div>
+              <div class="vm-switch-row">
+                <label for="profShareLocation">Allow GPS lookup</label>
+                <input id="profShareLocation" type="checkbox" class="vm-checkbox" />
+              </div>
+              <div class="vm-switch-row">
+                <label for="profAnonReports">Anonymous community reports</label>
+                <input id="profAnonReports" type="checkbox" class="vm-checkbox" />
+              </div>
+
+              <hr style="border:none; border-top:1px solid var(--vm-border-hairline); margin:14px 0;" />
+              <p id="profSecurityStatus" class="vm-section-subtitle" style="margin-bottom:10px; font-weight:600;"></p>
+              <div class="vm-form-group">
+                <label for="profCurrPw" class="vm-form-label">Current Password</label>
+                <input id="profCurrPw" class="vm-input" type="password" autocomplete="current-password" />
+              </div>
+              <div class="vm-form-group">
+                <label for="profNewPw" class="vm-form-label">New Password (min 8 chars)</label>
+                <input id="profNewPw" class="vm-input" type="password" autocomplete="new-password" minlength="8" />
+              </div>
+            </div>
+
+            <button type="submit" class="vm-btn vm-btn-primary" style="margin-top:16px; width:100%;">Save Settings</button>
+          </article>
+        </div>
+      </form>
+    </section>
+
+    <!-- Scrollable Section 4: Account Session & Logout -->
+    <section class="vm-section" style="padding-top:4px;">
+      <article class="vm-card vm-session-card">
+        <div>
+          <h2 class="vm-section-title vm-title-with-ico" style="font-size:1.15rem;">
+            <span class="vm-head-ico" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+            </span>
+            <span>Account Session</span>
+          </h2>
+          <p id="profSessionStatus" class="vm-section-subtitle" style="margin-top:4px;">Checking active login session...</p>
+        </div>
+        <div style="display:flex; align-items:center; gap:10px; flex-wrap:wrap;">
+          <a href="login.html" id="vmSettingsSwitchAccountBtn" class="vm-btn vm-btn-glass vm-btn-sm" style="border-color:var(--vm-border-hairline);">Sign In / Switch Account</a>
+          <a href="logout.html" id="vmSettingsLogoutLink" class="vm-btn vm-btn-logout vm-btn-sm">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path><polyline points="16 17 21 12 16 7"></polyline><line x1="21" y1="12" x2="9" y2="12"></line></svg>
+            <span>Logout</span>
+          </a>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <footer class="vm-footer">
+    <div class="vm-container vm-footer-inner">
+      <span>VayuMitra &ndash; Beyond Air Quality Monitoring.</span>
+      <div class="vm-footer-links">
+        <a href="index.html">Home</a>
+        <a href="insights.html">Insights</a>
+        <a href="routes.html">Routes</a>
+        <a href="alerts.html">Alerts</a>
+        <a href="reports.html">Reports</a>
+        <a href="community.html">Community</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.4/dist/chart.umd.min.js"></script>
+  <script src="javascript/api.js"></script>
+  <script src="javascript/main.js"></script>
+  <script src="javascript/features.js"></script>
+</body>
+</html>

@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 380 260" fill="none" role="img" aria-label="Two characters wearing masks looking uncomfortable in bad air quality">
+  <defs>
+    <linearGradient id="skyBad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FFEDD5"/>
+      <stop offset="100%" stop-color="#FFF7ED"/>
+    </linearGradient>
+    <linearGradient id="hazeBad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#FDBA74" stop-opacity="0.35"/>
+      <stop offset="50%" stop-color="#FB923C" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#FDBA74" stop-opacity="0.35"/>
+    </linearGradient>
+  </defs>
+  <rect width="380" height="260" rx="22" fill="url(#skyBad)"/>
+  <!-- Smog / Dust Particulates -->
+  <rect x="0" y="96" width="380" height="90" fill="url(#hazeBad)"/>
+  <circle cx="56" cy="64" r="4" fill="#EA580C" opacity="0.28"/>
+  <circle cx="144" cy="48" r="3" fill="#EA580C" opacity="0.25"/>
+  <circle cx="290" cy="74" r="5" fill="#EA580C" opacity="0.24"/>
+  <circle cx="332" cy="118" r="3.5" fill="#EA580C" opacity="0.3"/>
+  <circle cx="40" cy="130" r="3.5" fill="#EA580C" opacity="0.3"/>
+  <!-- Ground -->
+  <path d="M0 206C92 188 188 196 280 186C325 182 356 188 380 198V260H0V206Z" fill="#FB923C" opacity="0.28"/>
+  <path d="M0 222C110 210 230 210 380 222V260H0V222Z" fill="#C2410C" opacity="0.18"/>
+
+  <!-- Character 1 (Left - Uncomfortable, Wearing Mask, Furrowed Brows, Hand on Chest) -->
+  <g transform="translate(86, 64)">
+    <ellipse cx="44" cy="164" rx="34" ry="7" fill="#9A3412" opacity="0.16"/>
+    <rect x="29" y="122" width="11" height="38" rx="5.5" fill="#334155"/>
+    <rect x="47" y="122" width="11" height="38" rx="5.5" fill="#334155"/>
+    <ellipse cx="33" cy="161" rx="8" ry="4.5" fill="#9A3412"/>
+    <ellipse cx="54" cy="161" rx="8" ry="4.5" fill="#9A3412"/>
+    <!-- Slightly Hunched Torso -->
+    <path d="M20 75C20 63 30 57 44 57C58 57 68 63 68 75L72 126C72 130 68 133 63 133H25C20 133 16 130 16 126L20 75Z" fill="#EA580C"/>
+    <!-- Left Arm Bent to Chest (Discomfort) -->
+    <path d="M18 76C10 92 22 96 36 92" stroke="#C2410C" stroke-width="10" stroke-linecap="round"/>
+    <circle cx="38" cy="91" r="5.5" fill="#F4B692"/>
+    <!-- Right Arm -->
+    <path d="M68 76C78 88 78 102 72 114" stroke="#C2410C" stroke-width="10" stroke-linecap="round"/>
+    <circle cx="71" cy="116" r="5.5" fill="#F4B692"/>
+    <!-- Hair & Head -->
+    <circle cx="44" cy="31" r="23" fill="#2C1B18"/>
+    <path d="M21 35C20 47 24 55 30 57H58C64 55 68 47 67 35" fill="#2C1B18"/>
+    <rect x="38" y="45" width="12" height="14" rx="5" fill="#F4B692"/>
+    <circle cx="44" cy="34" r="18" fill="#F4B692"/>
+    <path d="M26 29C29 17 42 14 54 18C60 20 63 26 62 31C55 25 41 24 26 29Z" fill="#2C1B18"/>
+    <!-- Uncomfortable Furrowed Brows & Squinting Eyes -->
+    <path d="M33 27L40 29" stroke="#1F2937" stroke-width="2" stroke-linecap="round"/>
+    <path d="M55 27L48 29" stroke="#1F2937" stroke-width="2" stroke-linecap="round"/>
+    <path d="M34 32C36 30.5 38 30.5 40 32" stroke="#1F2937" stroke-width="2" stroke-linecap="round"/>
+    <path d="M48 32C50 30.5 52 30.5 54 32" stroke="#1F2937" stroke-width="2" stroke-linecap="round"/>
+    <!-- N95 Style Mask -->
+    <path d="M26 36L31 37M62 36L57 37" stroke="#CBD5E1" stroke-width="1.6"/>
+    <path d="M30 35C36 32 52 32 58 35L56 47C50 51 38 51 32 47L30 35Z" fill="#FFF7ED" stroke="#EA580C" stroke-width="1.4"/>
+    <circle cx="44" cy="41" r="3" fill="#FDBA74" stroke="#EA580C" stroke-width="1"/>
+  </g>
+
+  <!-- Character 2 (Right - Uncomfortable, Wearing Mask, Touching Mask/Throat) -->
+  <g transform="translate(202, 58)">
+    <ellipse cx="46" cy="170" rx="35" ry="7" fill="#9A3412" opacity="0.16"/>
+    <rect x="30" y="124" width="12" height="42" rx="6" fill="#1E293B"/>
+    <rect x="49" y="124" width="12" height="42" rx="6" fill="#1E293B"/>
+    <ellipse cx="35" cy="167" rx="8.5" ry="4.5" fill="#9A3412"/>
+    <ellipse cx="56" cy="167" rx="8.5" ry="4.5" fill="#9A3412"/>
+    <path d="M20 73C20 61 31 55 46 55C61 55 72 61 72 73L74 128C74 132 70 135 65 135H27C22 135 18 132 18 128L20 73Z" fill="#F97316"/>
+    <!-- Left Arm -->
+    <path d="M19 75C12 90 12 104 16 114" stroke="#C2410C" stroke-width="10" stroke-linecap="round"/>
+    <circle cx="17" cy="116" r="5.5" fill="#E8A985"/>
+    <!-- Right Arm Raised near Mask -->
+    <path d="M72 75C84 82 78 62 62 48" stroke="#C2410C" stroke-width="10" stroke-linecap="round"/>
+    <circle cx="60" cy="46" r="5.5" fill="#E8A985"/>
+    <!-- Head & Hair -->
+    <rect x="40" y="44" width="12" height="14" rx="5" fill="#E8A985"/>
+    <circle cx="46" cy="32" r="18.5" fill="#E8A985"/>
+    <path d="M27 29C27 15 40 10 54 13C63 15 66 23 65 31C58 23 39 21 27 29Z" fill="#1E293B"/>
+    <!-- Furrowed Brows & Uncomfortable Eyes -->
+    <path d="M35 25L42 27" stroke="#1F2937" stroke-width="2" stroke-linecap="round"/>
+    <path d="M57 25L50 27" stroke="#1F2937" stroke-width="2" stroke-linecap="round"/>
+    <circle cx="39" cy="30" r="2.1" fill="#1F2937"/>
+    <circle cx="53" cy="30" r="2.1" fill="#1F2937"/>
+    <!-- Mask -->
+    <path d="M28 34L33 35M64 34L59 35" stroke="#CBD5E1" stroke-width="1.6"/>
+    <path d="M32 33C38 30 54 30 60 33L58 45C52 49 40 49 34 45L32 33Z" fill="#FFF7ED" stroke="#EA580C" stroke-width="1.4"/>
+    <circle cx="46" cy="39" r="3" fill="#FDBA74" stroke="#EA580C" stroke-width="1"/>
+  </g>
+</svg>
